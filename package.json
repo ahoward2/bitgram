@@ -8,6 +8,8 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@icons-pack/react-simple-icons": "^3.13.0",
+    "@types/simple-icons": "^2.5.0",
     "classnames": "2.2.6",
     "date-fns": "2.10.0",
     "gray-matter": "4.0.2",
