@@ -5,6 +5,7 @@ coverImage: '/assets/blog/dynamic-routing/cover.jpg'
 date: '2020-03-16T05:35:07.322Z'
 author:
   name: Austin Howard
+  slug: ahoward
   picture: '/assets/blog/authors/austin.jpeg'
 ogImage:
   url: '/assets/blog/dynamic-routing/cover.jpg'

@@ -1,6 +1,7 @@
 import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
+import Author from '../pages/authors/[author]'
 
 const postsDirectory = join(process.cwd(), '_posts')
 
@@ -41,6 +42,17 @@ export function getAllPosts(fields: string[] = []) {
   const slugs = getPostSlugs()
   const posts = slugs
     .map((slug) => getPostBySlug(slug, fields))
+    // sort posts by date in descending order
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+  return posts
+}
+
+export function getPostsByAuthor(author: string, fields: string[] = []){
+  const slugs = getPostSlugs()
+  const posts = slugs
+    .map((slug) => getPostBySlug(slug, fields))
+    // filter out posts by author
+    .filter((post) => post.author === author )
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
   return posts

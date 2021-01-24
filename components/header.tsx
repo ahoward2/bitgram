@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <h2 className="flex-col flex items-center text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-10 mt-6">
       <Link href="/">
-        <a className="hover:underline text-secondary">Wreact</a>
+        <a className="hover:underline text-dark">BitGram</a>
       </Link>
     </h2>
   )

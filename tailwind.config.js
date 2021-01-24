@@ -11,7 +11,8 @@ module.exports = {
         primary: '#6000FF',
         secondary: '#00E6B3',
         tertiary: '#FADA00',
-        dark: '#280042'
+        dark: '#280042',
+        lightChrome: '#BDBFBF'
       },
       spacing: {
         28: '7rem',

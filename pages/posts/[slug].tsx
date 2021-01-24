@@ -11,6 +11,7 @@ import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
 import PostType from '../../types/post'
+import MoreStories from '../../components/more-stories'
 
 type Props = {
   post: PostType
@@ -31,7 +32,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article className="mb-32">
+            <article className="md:mb-12">
               <Head>
                 <title>
                   {post.title} | Next.js Blog Example with {CMS_NAME}
@@ -46,6 +47,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
               />
               <PostBody content={post.content} />
             </article>
+            {morePosts &&  <MoreStories posts={morePosts}></MoreStories>}
           </>
         )}
       </Container>
@@ -71,6 +73,16 @@ export async function getStaticProps({ params }: Params) {
     'ogImage',
     'coverImage',
   ])
+
+  const morePosts = getAllPosts([
+    'title',
+    'date',
+    'slug',
+    'author',
+    'coverImage',
+    'excerpt',
+  ])
+
   const content = await markdownToHtml(post.content || '')
 
   return {
@@ -79,6 +91,7 @@ export async function getStaticProps({ params }: Params) {
         ...post,
         content,
       },
+      morePosts
     },
   }
 }

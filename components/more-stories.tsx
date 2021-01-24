@@ -9,10 +9,7 @@ type Props = {
 const MoreStories = ({ posts }: Props) => {
   return (
     <section>
-      <h3 className="flex-col flex items-center mb-2 text-2xl md:text-4xl font-bold text-secondary font-mono tracking-tighter">
-        More Stories 👇
-      </h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 md:col-gap-16 lg:col-gap-32 row-gap-2 md:row-gap-32 mb-16">
+      <div className="grid grid-cols-1 mt-2 md:grid-cols-2 md:col-gap-2 lg:grid-cols-3 lg:col-gap-2 row-gap-2">
         {posts.map((post) => (
           <HeroPost
           title={post.title}

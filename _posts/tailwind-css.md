@@ -1,13 +1,12 @@
 ---
-title: 'Developer Blog Build With NextJS and Tailwind CSS'
-excerpt: 'What is Next.js and Tailwind CSS and why are they good for building a blog?'
+title: 'Tailwind CSS Is Like Painting On A Canvas'
+excerpt: 'Tailwind CSS is a styling library that is growing in popularity. Imagine painting on a canvas, but for web pages! 🤯'
 coverImage: '/assets/blog/dynamic-routing/cover.jpg'
-date: '2020-03-16T05:35:07.322Z'
+date: '2020-12-20T05:35:07.322Z'
 author:
   name: Austin Howard
   slug: ahoward
   picture: '/assets/blog/authors/austin.jpeg'
-  twitter: 'https://twitter.com/a_howard8'
 ogImage:
   url: '/assets/blog/dynamic-routing/cover.jpg'
 ---
